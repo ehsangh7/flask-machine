@@ -17,7 +17,7 @@ def hello_world():
     else:
         text = request.form['text']
         random_string = uuid.uuid4().hex
-        path = "static/" + random_string + ".svg"
+        path = "app/static/" + random_string + ".svg"
         files = [f for f in os.listdir('.') if os.path.isfile(f)]
         for f in files:
           print(f)
