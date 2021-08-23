@@ -21,9 +21,9 @@ def hello_world():
         files = [f for f in os.listdir('.') if os.path.isfile(f)]
         for f in files:
           print(f)
-        model = load('./model.joblib')
+        model = load('app/model.joblib')
         np_arr = floats_string_to_np_arr(text)
-        make_picture('./AgesAndHeights.pkl', model, np_arr, path)
+        make_picture('app/AgesAndHeights.pkl', model, np_arr, path)
 
         return render_template('index.html', href=path[4:])
 
